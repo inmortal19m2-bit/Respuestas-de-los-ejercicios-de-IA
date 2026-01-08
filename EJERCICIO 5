@@ -1,0 +1,22 @@
+% Ejercicio 5: parentesco (hermano/a)
+% hechos de ejemplo
+progenitor(juan, maria).
+progenitor(juan, pedro).
+progenitor(ana, maria).
+progenitor(ana, pedro).
+
+hombre(pedro).
+mujer(maria).
+
+% regla para hermanos
+es_hermano(X, Y) :-
+    progenitor(P, X),
+    progenitor(P, Y),
+    X \= Y.
+
+% --- pruebas rapidas ---
+% ?- invertir([a,b,c,d], R).
+% ?- sumar_lista([10,5,2,3], S).
+% ?- ultimo_elemento([prolog, ia, logica], U).
+% ?- filtrar_mayores([10,3,15,7,20], 10, R).
+% ?- es_hermano(pedro, maria).
