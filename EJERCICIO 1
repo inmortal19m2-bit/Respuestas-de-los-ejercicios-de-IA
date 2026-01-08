@@ -1,0 +1,5 @@
+% Ejercicio 1: invertir una lista
+invertir([], []).
+invertir([X|Xs], R) :-
+    invertir(Xs, Ys),
+    append(Ys, [X], R).
