@@ -1,0 +1,8 @@
+% Ejercicio 4: filtrar los elementos mayores que N
+filtrar_mayores([], _, []).
+filtrar_mayores([X|Xs], N, [X|R]) :-
+    X > N,
+    filtrar_mayores(Xs, N, R).
+filtrar_mayores([X|Xs], N, R) :-
+    X =< N,
+    filtrar_mayores(Xs, N, R).
