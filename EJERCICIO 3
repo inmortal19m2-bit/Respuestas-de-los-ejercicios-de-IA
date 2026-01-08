@@ -1,0 +1,4 @@
+% Ejercicio 3: obtener el ultimo elemento de una lista
+ultimo_elemento([X], X).
+ultimo_elemento([_|Xs], U) :-
+    ultimo_elemento(Xs, U).
